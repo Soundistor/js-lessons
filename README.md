@@ -1,4 +1,4 @@
-js-lessons
+JS-lessons
 ==========
 
 JS&amp;jQ lessons
