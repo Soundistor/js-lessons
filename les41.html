@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1251"/>
+    <title></title>
+</head>
+<body>
+<div>
+    <script type="text/javascript">
+        /*
+         Домашнее задание к 41-му уроку.
+
+         Напишите функцию, которая получает в качестве параметра массив и перебирает его на предмет
+         преобразования чисел из простых, в такие, у которых есть два знака после запятой., т.е., если
+         в исходном массиве было число 11, то на выходе должно быть 11.00.
+
+         В результате работы функции массив должен изменить свои значения.
+
+         Массив для примера:
+         var randSimbol = [10.5, 15, 112, 77.6];
+
+         */
+
+        var randSimbol = [10.5, 15, 112, 77.6];
+
+        function transfrom(anyarray)
+        {
+            var tr_array = [0,0,0,0];
+            for (var i = 0; i < anyarray.length; i++)
+            {
+                tr_array[i] = anyarray[i].toFixed(2);
+            }
+            document.write(tr_array);
+        }
+
+        transfrom(randSimbol);
+    </script>
+
+</div>
+</body>
+</html>
