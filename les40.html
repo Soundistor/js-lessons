@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1251"/>
+    <title></title>
+</head>
+<body>
+<div>
+    <script type="text/javascript">
+        /*
+         Домашнее задание к 40-му уроку.
+
+         Напишите функцию, которая получает в качестве параметра массив и перебирает
+         его на предмет преобразования строк, начинающихся с числа в обычные числа.
+         В результате работы функции, массив должен изменить свои значения на полностью числовые.
+
+         Массив для задания:
+
+         var myArray = ["100 попугаев", "201 рубль", "624 доллара", "109 кроликов", "33 весельчака", "62 кабана"];
+         */
+
+        var myArray = ["100 попугаев", "201 рубль", "624 доллара", "109 кроликов", "33 весельчака", "62 кабана"];
+
+        function transform(anyarray)
+        {
+            for (var i = 0; i < anyarray.length; i++)
+            {
+                document.write("Сторка " + "\'" + anyarray[i] + "\'" + " содержит число " + parseInt(anyarray[i]) + "<br />");
+            }
+        }
+
+        transform(myArray);
+    </script>
+
+</div>
+</body>
+</html>

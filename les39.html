@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1251"/>
+    <title>39</title>
+</head>
+<body>
+<div>
+    <script type="text/javascript">
+        /*
+         Домашнее задание к 39-му уроку.
+
+         Написать функцию, которая получает в качестве параметра массив,
+         затем перебирает все его элементы и выводит на экран, какая
+         информация содержится в каждом элементе: число или нечисло.
+         Массив для примера: var randSimbol = ["Молоко", 77, 11, "Мед", -88];
+         */
+        var randSimbol = ["Молоко", 77, 11, "Мед", -88];
+
+        function inform(anyarray)
+        {
+            for (var i = 0; i < anyarray.length-1; i++)
+        {
+            if (isNaN(anyarray[i]))
+            {
+                document.write("\'" + anyarray[i] + "\'" + " - нечисло, ");
+            }
+            else
+            {
+                document.write("\'" + anyarray[i] + "\'" + " - число, ");
+            }
+        }
+            //Last element of array
+                if (isNaN(anyarray[anyarray.length]))
+                {
+                    document.write("\'" + anyarray[i] + "\'" + " - нечисло. ");
+                }
+                else
+                {
+                    document.write("\'" + anyarray[i] + "\'" + " - число. ");
+                }
+        }
+
+        inform(randSimbol);
+
+    </script>
+
+</div>
+</body>
+</html>
