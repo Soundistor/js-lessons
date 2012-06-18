@@ -27,12 +27,15 @@
         function transfrom(anyarray)
         {
             //Wrong way to do it
-            var tr_array = [0,0,0,0];
+            //var tr_array = [0,0,0,0];
+            //This will be the right way
             for (var i = 0; i < anyarray.length; i++)
             {
-                tr_array[i] = anyarray[i].toFixed(2);
+                //tr_array[i] = anyarray[i].toFixed(2);
+                anyarray[i] = anyarray[i].toFixed(2);
+                document.write(anyarray[i] + "<br/>");
             }
-            document.write(tr_array);
+            //document.write(tr_array);
         }
 
         transfrom(randSimbol);
