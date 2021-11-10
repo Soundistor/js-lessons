@@ -1,0 +1,91 @@
+{
+  "openapi" : "3.0.2",
+  "info" : {
+    "title" : "Mercury API",
+    "version" : "2.1"
+  },
+  "servers" : [ {
+    "url" : "http://x.add.ua:8238/api",
+    "description" : "Prod"
+  } ],
+  "security" : [ {
+    "authApiKey" : [ ]
+  } ],
+  "paths" : {
+    "/" : {
+      "post" : {
+        "summary" : "Region",
+        "description" : "Возвращает справочник регионов",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/req"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Ok",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/resp"
+                }
+              }
+            }
+          }
+        },
+        "security" : [ ]
+      }
+    }
+  },
+  "components" : {
+    "schemas" : {
+      "req" : {
+        "required" : [ "a", "m", "p" ],
+        "properties" : {
+          "a" : {
+            "type" : "string",
+            "description" : "apiKey",
+            "example" : "d67251c3363fbcb4b322180fe49c1e4d"
+          },
+          "m" : {
+            "type" : "string",
+            "description" : "method",
+            "example" : "getRequestTypesDictionary"
+          },
+          "p" : {
+            "type" : "object",
+            "description" : "params"
+          }
+        }
+      },
+      "resp" : {
+        "required" : [ "s" ],
+        "properties" : {
+          "s" : {
+            "type" : "boolean",
+            "description" : "status",
+            "example" : true
+          },
+          "m" : {
+            "type" : "string",
+            "description" : "message",
+            "example" : "doSth sad"
+          },
+          "d" : {
+            "type" : "object",
+            "description" : "data"
+          },
+          "e" : {
+            "type" : "array",
+            "description" : "errors",
+            "example" : ":-("
+          }
+        }
+      }
+    }
+  }
+}
